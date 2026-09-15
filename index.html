@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Help Center</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-600 flex items-center justify-center p-5">
+
+    <main class="bg-white p-8 rounded-2xl shadow-2xl w-[420px] max-w-full">
+
+        <h2 class="text-[26px] font-bold text-center text-indigo-600 mb-3">
+            Event Help Center
+        </h2>
+
+        <p class="text-center text-gray-500 mb-6">
+            Frequently Asked Questions
+        </p>
+
+        <div class="mb-3.5">
+            <button class="question w-full text-left px-4 py-3.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-[15px] font-semibold rounded-lg cursor-pointer transition duration-150 hover:-translate-y-0.5 hover:shadow-lg">
+                How can I register for an event?
+            </button>
+            <p class="answer hidden px-4 py-3.5 bg-indigo-50 text-gray-700 border-l-4 border-indigo-500 rounded-b-lg leading-6">
+                Browse the available events and click the "Register Now" button on any event you want to attend. You can check your registered events from your dashboard.
+            </p>
+        </div>
+
+        <div class="mb-3.5">
+            <button class="question w-full text-left px-4 py-3.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-[15px] font-semibold rounded-lg cursor-pointer transition duration-150 hover:-translate-y-0.5 hover:shadow-lg">
+                How can I get my event ticket?
+            </button>
+            <p class="answer hidden px-4 py-3.5 bg-indigo-50 text-gray-700 border-l-4 border-indigo-500 rounded-b-lg leading-6">
+                After successful registration, your event ticket will be available in the "My Tickets" section. You can view or download it anytime.
+            </p>
+        </div>
+
+        <div class="mb-3.5">
+            <button class="question w-full text-left px-4 py-3.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-[15px] font-semibold rounded-lg cursor-pointer transition duration-150 hover:-translate-y-0.5 hover:shadow-lg">
+                Where can I check my event schedule?
+            </button>
+            <p class="answer hidden px-4 py-3.5 bg-indigo-50 text-gray-700 border-l-4 border-indigo-500 rounded-b-lg leading-6">
+                Open the "Event Schedule" section to view the date, time, venue, and complete schedule of your registered events.
+            </p>
+        </div>
+
+        <div class="mb-3.5">
+            <button class="question w-full text-left px-4 py-3.5 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-[15px] font-semibold rounded-lg cursor-pointer transition duration-150 hover:-translate-y-0.5 hover:shadow-lg">
+                Can I cancel my event registration?
+            </button>
+            <p class="answer hidden px-4 py-3.5 bg-indigo-50 text-gray-700 border-l-4 border-indigo-500 rounded-b-lg leading-6">
+                Yes! Go to the "My Events" section, select the event, and click "Cancel Registration". Cancellation availability may depend on the event policy.
+            </p>
+        </div>
+
+    </main>
+
+    <script>
+        let questions = document.querySelectorAll(".question");
+
+        questions.forEach(function(question) {
+            question.addEventListener("click", function() {
+                let answer = question.nextElementSibling;
+                answer.classList.toggle("hidden");
+            });
+        });
+    </script>
+
+</body>
+</html>
